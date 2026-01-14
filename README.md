@@ -76,9 +76,5 @@ Sau khi cửa sổ hiện lên, chọn E2E Testing -> Chrome -> lab_test.cy.js.
 Bash
 
 npx cypress run
-🎥 Minh chứng kết quả
-Ảnh chụp màn hình: Lưu trong thư mục cypress/screenshots.
 
-Video demo: [Nếu bạn đã quay video, hãy ghi "Đính kèm trong thư mục dự án" hoặc dán link Google Drive/YouTube vào đây].
-=======
->>>>>>> 2a12fd2f37c8e85ef791c582bb5f9b1c7196c149
+
