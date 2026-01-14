@@ -1,0 +1,23 @@
+{
+  "name": "kiemthphanmemmuaxuan2026",
+  "version": "1.0.0",
+  "description": "Bài tập Kiểm thử phần mềm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoLyHoangNam/Kiemthphanmemmuaxuan2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoLyHoangNam/Kiemthphanmemmuaxuan2026/issues"
+  },
+  "homepage": "https://github.com/DoLyHoangNam/Kiemthphanmemmuaxuan2026#readme",
+  "devDependencies": {
+    "cypress": "^15.9.0"
+  }
+}
