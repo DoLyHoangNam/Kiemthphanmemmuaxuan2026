@@ -1,39 +1,19 @@
 package analyzer;
-
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
-import java.util.Collections;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class StudentAnalyzerTest {
+    StudentAnalyzer analyzer = new StudentAnalyzer();
 
     @Test
-    public void testCountExcellentStudents_NormalCase() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(
-                2,
-                analyzer.countExcellentStudents(
-                        Arrays.asList(9.0, 8.5, 7.0, 11.0, -1.0)
-                )
-        );
-    }
-
-    @Test
-    public void testCountExcellentStudents_EmptyList() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(0, analyzer.countExcellentStudents(Collections.emptyList()));
-    }
-
-    @Test
-    public void testCalculateValidAverage() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(
-                8.17,
-                analyzer.calculateValidAverage(
-                        Arrays.asList(9.0, 8.5, 7.0, 11.0, -1.0)
-                ),
-                0.01
-        );
+    public void testCriteria() {
+        // 1. EP & BVA: Test vùng tương đương và giá trị biên
+        // Biên 7.99 (không giỏi) và 8.0 (giỏi)
+        assertEquals(1, analyzer.countExcellent(Arrays.asList(7.99, 8.0)));
+        
+        // 2. DT: Test bảng quyết định (Trường hợp Null/Lỗi)
+        assertEquals(0, analyzer.countExcellent(null)); // Quy tắc danh sách null
+        assertEquals(0, analyzer.countExcellent(Arrays.asList(-1.0, 11.0))); // Quy tắc điểm ngoài vùng
     }
 }

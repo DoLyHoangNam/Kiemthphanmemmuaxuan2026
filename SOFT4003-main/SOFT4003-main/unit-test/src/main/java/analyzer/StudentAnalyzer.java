@@ -1,34 +1,15 @@
 package analyzer;
-
 import java.util.List;
 
 public class StudentAnalyzer {
-
-    public int countExcellentStudents(List<Double> scores) {
-        if (scores == null || scores.isEmpty()) return 0;
-
+    // Tiêu chí EP/BVA: Kiểm tra điểm hợp lệ và đạt giỏi
+    public int countExcellent(List<Double> scores) {
+        if (scores == null) return 0;
         int count = 0;
-        for (Double score : scores) {
-            if (score >= 0 && score <= 10 && score >= 8.0) {
-                count++;
-            }
+        for (Double s : scores) {
+            // Logic: Điểm [0-10]. Giỏi >= 8.0
+            if (s != null && s >= 0 && s <= 10 && s >= 8.0) count++;
         }
         return count;
-    }
-
-    public double calculateValidAverage(List<Double> scores) {
-        if (scores == null || scores.isEmpty()) return 0;
-
-        double sum = 0;
-        int validCount = 0;
-
-        for (Double score : scores) {
-            if (score >= 0 && score <= 10) {
-                sum += score;
-                validCount++;
-            }
-        }
-
-        return validCount == 0 ? 0 : sum / validCount;
     }
 }
